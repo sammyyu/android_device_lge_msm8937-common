@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
     init.wifi.rc \
     ueventd.qcom.rc
 
+# HWADDRS
+PRODUCT_PACKAGES += \
+    hwaddrs
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
