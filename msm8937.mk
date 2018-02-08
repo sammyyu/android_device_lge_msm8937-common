@@ -107,14 +107,18 @@ PRODUCT_PACKAGES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     LgeDoze
-
+  
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
 
 # Gps
 PRODUCT_PACKAGES += \
-    gps.msm8937
+    gps.msm8937 \
+    libgps.utils \
+    libloc_core \
+    libloc_eng \
+    libgnsspps 
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -140,6 +144,7 @@ PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
     init.target.rc \
     init.baseband.sh \
+    init.wifi.rc \
     ueventd.qcom.rc
 
 # IPA Manager
@@ -170,7 +175,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # OMX
 PRODUCT_PACKAGES += \
